@@ -1,0 +1,4 @@
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+0 0/12 * * * root test -x /usr/bin/certbot && perl -e 'sleep int(rand(3600))' && certbot --webroot -w /usr/share/nginx/html -q renew
